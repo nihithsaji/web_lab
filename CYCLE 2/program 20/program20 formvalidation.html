@@ -1,0 +1,54 @@
+<hmtl>
+<head>
+ <title>simple registration form</title>
+</head>
+<body>
+ <h2>Registration Form</h2>
+ <form onsubmit="return validationForm()">
+  Name:<br>
+   <input type="text" id="name"><br><br>
+  Email:<br>
+   <input type="text" id="email"><br><br>
+  Phone no:<br>
+   <input type="text" id="phone"><br><br>
+  Password:<br>
+   <input type="password" id="password"><br><br>
+  Confirm Password: <br>
+   <input type="password" id="confirm"><br><br>
+   <input type="submit" value="Register">
+  </form>
+<script>
+  function validationForm(){
+  var name=document.getElementById("name").value;
+  var email=document.getElementById("email").value;
+  var phone=document.getElementById("phone").value;
+  var password=document.getElementById("password");
+  var confirm=document.getElementById("confirm").value;
+
+  if(name=="" || email=="" || phone=="" || password=="" || confirm=="")
+  { 
+    alert("All fields are required");
+    return false;
+  }
+  if(!email.includes("@") || !email.includes(".")){
+    alert("Enter a valid email ");
+    return false;
+  }
+  if(phone.length != 10 || isNaN(phone)){
+  alert("Ente a valid 10 digit phone number");
+  return false;
+  }
+  if(password.length<6){
+  alert("password must be at least 6 characters");
+  return false;
+  }
+  if(password != confirm){
+  alert("passwords doesnt match");
+  return false;
+  } 
+  alert("Registration Successfull");
+}
+  
+</script>
+</body>
+</html>

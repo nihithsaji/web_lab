@@ -1,0 +1,37 @@
+<html>
+<head>
+ <title>Simple Background changer</title>
+ <style>
+  body{
+ background-repeat:no-repeat;
+ background-size:cover;
+}
+ 
+ </style>
+</head>
+<body>
+ <button onclick="changeColor()" >Change Color</button>
+ <button onclick="changeBackgroundImage()">Change Background image</button>
+ <button onclick="resetBackground()">Resume to Normal</button>
+<script>
+ const orginalColor = "white";
+ const orginalImage="";
+ 
+ function changeColor(){
+  document.body.style.backgroundImage="";
+  document.body.style.backgroundColor="lightblue";
+}
+
+ function changeBackgroundImage(){
+  document.body.style.backgroundImage="url(https://img.magnific.com/free-photo/sunlight-shining-single-mountain-top-sunset-with-dark-cloudy-sky_181624-377.jpg?semt=ais_hybrid&w=740&q=80)";
+  document.body.style.backgroundColor="";
+}
+  
+ function resetBackground(){
+  document.body.style.backgroundColor=orginalColor;
+  document.body.style.backgroundImage=orginalImage;
+}
+</script>
+
+</body>
+</html>
