@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Room Booking</title>
+</head>
+<body>
+<form action="/submit">
+Guest Name: <input type="text" name="name" required>
+<br><br>
+
+Email: <input type="text" name="mail" required>
+<br><br>
+
+Phone No.: <input type="number" name="Phone number" required>
+<br><br>
+
+<label for="start-date">Checkin Date </label>
+<input type="date" id="start-date" name="start-date">
+
+<label for="start-date">  Checkout Date </label>
+<input type="date" id="checkout-date" name="Checkout-date">
+<br><br>
+
+
+<label for="guestnumber">Number of Guest :</label>
+<input type="number" id="guestnumber" name="guestnumber" min="1" max="50">
+
+<br>
+<br>
+<label>Room Type </label>
+<select>
+   <option>Suite</option>
+   <option>Delux</option>
+   <option>Family</option>
+</select>
+<br><br>
+
+Facilities Required : 
+<input type="checkbox">Pool
+<input type="checkbox">Kitchen
+<input type="checkbox">Parking
+<input type="checkbox">WIFI
+<br><br>
+
+Special Requests<br> 
+<textarea rows="5" cols="30"></textarea>
+<br><br>
+
+Upload ID Proof <input type="file" id="file-upload" name="fileName">
+<br><br>
+
+<input " type="submit" value="Book Now">
+
+
+</body>
+</html>
